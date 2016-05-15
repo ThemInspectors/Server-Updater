@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+BUNGEECORD=true
 #Author: Mr_Cleric ( https://www.spigotmc.org/members/mr_cleric.83765/ )
 #
 #Variables
@@ -19,7 +20,11 @@ BUILD_TOOLS_DIRECTORY=buildtools
 rm $SERVER_DIRECTORY/$OUTPUT_NAME
 #move the new server jar
 mv $BUILD_TOOLS_DIRECTORY/$OUTPUT_NAME $SERVER_DIRECTORY 
+#test if BungeeCord is allowed
+if [ "$BUNGEECORD" = "true" ]
+then
 #remove old BungeeCord
 rm $BUNGEE_DIRECTORY/BungeeCord.jar
 #move the new one
 mv $BUILD_TOOLS_DIRECTORY/BungeeCord.jar $BUNGEE_DIRECTORY
+fi
