@@ -20,13 +20,20 @@ SERVER_TYPE=spigot
 BUILD_TOOLS_DIRECTORY=buildtools
 #server directory
 SERVER_DIRECTORY=Survival
-#BuildTools URL (with quotes)
-BUILTOOLS_URL='https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar'
+#BungeeCord Directory
+BUNGEE_DIRECTORY=bungee
 #Sleep wait time until move WARNING: The server should be off at this time so if you called this at 4:30AM and your server stops at 5:00AM it would be 
 #sleep time 30m , Also the server should be completely off so give one more minute also make sure the script has enough time to move the new server #jar into the directory. 30 seconds should be enough
 SLEEP_TIME=31m
 #Output name of the jar should be the same as the xxx.jar in your startup script
 OUTPUT_NAME=Spigot.jar
+#
+#Advanced Variables (Edit at your own risk)
+#
+#BuildTools URL (with quotes)
+BUILTOOLS_URL='https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar'
+#BungeeCord URL with quotes
+BUNGEECORD_URL='ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar'
 #
 #Script Body
 #
@@ -38,6 +45,8 @@ java -jar BuildTools.jar --rev $SERVER_VERSION
 mv $SERVER_TYPE-$SERVER_VERSION.jar $OUTPUT_NAME.jar
 # remove the buildtools jar for a new buildtools every time
 rm BuildTools.jar
+#Get BungeeCord
+wget $BUNGECORD_URL
 # go back to the begining directory
 cd ..
 #go to sleeeeep.....
@@ -45,4 +54,8 @@ sleep $SLEEP_TIME
 #remove the old server jar
 rm $SERVER_DIRECTORY/$OUTPUT_NAME
 #move the new server jar
-mv buildtools/$OUTPUT_NAME $SERVER_DIRECTORY 
+mv $BUILD_TOOLS_DIRECTORY/$OUTPUT_NAME $SERVER_DIRECTORY 
+#remove old BungeeCord
+rm $BUNGEE_DIRECTORY/BungeeCord.jar
+#move the new one
+mv $BUILD_TOOLS_DIRECTORY/BungeeCord.jar $BUNGEE_DIRECTORY
