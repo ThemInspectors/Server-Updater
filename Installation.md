@@ -15,10 +15,10 @@ Install crontab if you have not. run the scripts from crontab. like so...
 
 type "crontab -e"
 
-0 17 * * * sh servers/Server-Updater.sh
+0 17 * * * sh ~/<server directory>/Server-Updater.sh
 
 that gets the jars at 5pm o clock, Add this line on the bottom of your startup script
 
-sh ~/servers/File-Mover.sh
+sh ~/<server directory>/File-Mover.sh
 
 Note: this script assumes you have a buildtools directory if your buildtools directory is not present please make one
