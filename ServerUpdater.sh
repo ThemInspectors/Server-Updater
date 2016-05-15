@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#Author: Mr_Cleric (on SpigotMC)
+#Author: Mr_Cleric ( https://www.spigotmc.org/members/mr_cleric.83765/ )
 #
 #Installation:
 #
