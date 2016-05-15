@@ -1,6 +1,8 @@
 #!/bin/bash
 #
+#Set to anything other than "true" to disable BungeeCord
 BUNGEECORD=true
+#
 #Author: Mr_Cleric ( https://www.spigotmc.org/members/mr_cleric.83765/ )
 #
 #Variables
