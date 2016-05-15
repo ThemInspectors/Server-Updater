@@ -1,5 +1,8 @@
 #!/bin/bash
 #
+#set to antthing but false to disable Bungee
+BUNGEECORD=true
+#
 #Author: Mr_Cleric ( https://www.spigotmc.org/members/mr_cleric.83765/ )
 #
 #Variables
@@ -31,6 +34,9 @@ mv $SERVER_TYPE-$SERVER_VERSION.jar $OUTPUT_NAME.jar
 # remove the buildtools jar for a new buildtools every time
 rm BuildTools.jar
 #Get BungeeCord
+if [ "$BUNGEECORD" = "true" ]
+then
 wget $BUNGECORD_URL
 # go back to the begining directory
 cd ..
+fi
