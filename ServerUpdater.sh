@@ -30,7 +30,7 @@ cd $BUILD_TOOLS_DIRECTORY
 wget $BUILTOOLS_URL
 java -jar BuildTools.jar --rev $SERVER_VERSION
 #Rename the server jar
-mv $SERVER_TYPE-$SERVER_VERSION.jar $OUTPUT_NAME.jar
+mv $SERVER_TYPE-$SERVER_VERSION.jar $OUTPUT_NAME
 # remove the buildtools jar for a new buildtools every time
 rm BuildTools.jar
 #Get BungeeCord
