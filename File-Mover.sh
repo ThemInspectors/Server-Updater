@@ -1,10 +1,11 @@
 #!/bin/bash
 #
-#Set to anything other than "true" to disable BungeeCord
-BUNGEECORD=true
 #
 #Author: Mr_Cleric ( https://www.spigotmc.org/members/mr_cleric.83765/ )
+#Copyleft Mr_Cleric All wrongs reserved. used without permission
 #
+#Set to anything other than "true" to disable BungeeCord
+BUNGEECORD=true
 #Variables
 #
 #Output name of the jar should be the same as the xxx.jar in your startup script
