@@ -1,10 +1,12 @@
 #!/bin/bash
 #
-#set to anything but false to disable Bungee
-BUNGEECORD=true
 #
 #Author: Mr_Cleric ( https://www.spigotmc.org/members/mr_cleric.83765/ )
+#Copyleft Mr_Cleric All Wrongs Reserved. Used without permission.
 #
+#
+#set to anything but false to disable Bungee
+BUNGEECORD=true
 #Variables
 #
 #Server Version you require
